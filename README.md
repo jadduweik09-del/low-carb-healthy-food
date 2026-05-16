@@ -1,1 +1,1501 @@
-# low-carb-healthy-food
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Low Carb Healthy Food | لوكارب طعام صحي</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --turquoise: #1ABC9C;
+            --turquoise-dark: #16A085;
+            --turquoise-light: #D1F2EB;
+            --white: #FFFFFF;
+            --off-white: #F8F9FA;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-500: #6B7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --red-brown: #8B3A3A;
+            --red-brown-light: #A0522D;
+            --instagram: #E4405F;
+            --facebook: #1877F2;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow: 0 4px 6px rgba(0,0,0,0.07);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.12);
+            --radius-sm: 8px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--off-white);
+            color: var(--gray-900);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: var(--white);
+            padding: 0.8rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--turquoise);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--turquoise), var(--turquoise-dark));
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.4rem;
+        }
+        .logo-text {
+            font-weight: 900;
+            font-size: 1.3rem;
+            color: var(--turquoise-dark);
+            line-height: 1.2;
+        }
+        .logo-text small {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--gray-500);
+            display: block;
+        }
+        .nav-links {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .nav-link {
+            padding: 10px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: var(--transition);
+            cursor: pointer;
+            white-space: nowrap;
+            color: var(--gray-700);
+            text-decoration: none;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            background: var(--turquoise);
+            color: var(--white);
+        }
+        .cart-badge {
+            position: relative;
+            background: var(--red-brown);
+            color: var(--white);
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .cart-badge:hover {
+            background: var(--red-brown-light);
+            transform: scale(1.05);
+        }
+        .cart-count {
+            background: var(--white);
+            color: var(--red-brown);
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 900;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--turquoise) 0%, var(--turquoise-dark) 100%);
+            color: var(--white);
+            padding: 3rem 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-text h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        .hero-text .en-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            opacity: 0.95;
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin: 1rem 0;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--red-brown);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: rgba(255,255,255,0.2);
+            margin: 0 auto;
+        }
+        .search-bar {
+            display: flex;
+            gap: 0;
+            max-width: 500px;
+            margin-top: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        .search-bar input {
+            flex: 1;
+            padding: 14px 20px;
+            border: none;
+            font-size: 1rem;
+            font-family: 'Cairo', sans-serif;
+            outline: none;
+        }
+        .search-bar button {
+            padding: 14px 28px;
+            background: var(--red-brown);
+            color: var(--white);
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            transition: var(--transition);
+        }
+        .search-bar button:hover {
+            background: var(--red-brown-light);
+        }
+
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--gray-900);
+            margin: 2.5rem 0 1.5rem;
+            position: relative;
+            padding-right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 40px;
+            background: var(--turquoise);
+            border-radius: 50px;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin: 1.5rem 0;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-chip {
+            background: var(--turquoise-light);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--gray-700);
+        }
+        .contact-chip:hover {
+            background: var(--turquoise);
+            color: var(--white);
+        }
+        .contact-chip i {
+            font-size: 1rem;
+        }
+        .contact-chip.instagram {
+            background: #FFF0F3;
+            color: var(--instagram);
+        }
+        .contact-chip.instagram:hover {
+            background: var(--instagram);
+            color: var(--white);
+        }
+        .contact-chip.facebook {
+            background: #EBF5FF;
+            color: var(--facebook);
+        }
+        .contact-chip.facebook:hover {
+            background: var(--facebook);
+            color: var(--white);
+        }
+        .branch-tag {
+            background: var(--red-brown);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .social-section {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--white);
+            box-shadow: var(--shadow);
+        }
+        .social-btn i {
+            font-size: 1.3rem;
+        }
+        .social-btn.instagram {
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+        }
+        .social-btn.instagram:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .social-btn.facebook {
+            background: var(--facebook);
+        }
+        .social-btn.facebook:hover {
+            background: #166FE5;
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .social-btn.whatsapp-float-btn {
+            background: #25D366;
+        }
+        .social-btn.whatsapp-float-btn:hover {
+            background: #1EBE57;
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .subscription-card {
+            background: linear-gradient(135deg, var(--turquoise), var(--turquoise-dark));
+            color: var(--white);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+        .subscription-card::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        .sub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .sub-item {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 1.2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .sub-item .price {
+            font-size: 2rem;
+            font-weight: 900;
+        }
+        .sub-item .price small {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .sub-item .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+
+        .category-tabs {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 0.5rem 0;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            flex-wrap: wrap;
+        }
+        .category-tabs::-webkit-scrollbar {
+            display: none;
+        }
+        .cat-tab {
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: var(--transition);
+            border: 2px solid var(--gray-200);
+            background: var(--white);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.9rem;
+        }
+        .cat-tab.active,
+        .cat-tab:hover {
+            background: var(--turquoise);
+            color: var(--white);
+            border-color: var(--turquoise);
+        }
+
+        .menu-section {
+            display: none;
+            animation: fadeSlideIn 0.4s ease;
+        }
+        .menu-section.active {
+            display: block;
+        }
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.2rem;
+        }
+        .menu-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .menu-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .calorie-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--turquoise);
+            color: var(--white);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.75rem;
+            z-index: 2;
+        }
+        .menu-card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .menu-card-title {
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .menu-card-ingredients {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-bottom: 0.8rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .menu-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-card-price {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--turquoise-dark);
+        }
+        .add-btn {
+            background: var(--red-brown);
+            color: var(--white);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.85rem;
+        }
+        .add-btn:hover {
+            background: var(--red-brown-light);
+            transform: scale(1.05);
+        }
+        .add-btn.added {
+            background: var(--turquoise);
+            animation: pop 0.3s ease;
+        }
+        @keyframes pop {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin: 1rem 0;
+        }
+        .menu-table th {
+            background: var(--turquoise);
+            color: var(--white);
+            padding: 14px 16px;
+            font-weight: 800;
+            text-align: right;
+            font-size: 0.9rem;
+        }
+        .menu-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9rem;
+        }
+        .menu-table tr:hover {
+            background: var(--turquoise-light);
+        }
+        .menu-table .add-btn {
+            padding: 6px 16px;
+            font-size: 0.8rem;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .calculator-section {
+            background: linear-gradient(135deg, #f0fdf9, #e8f8f5);
+            border-radius: var(--radius-xl);
+            padding: 2.5rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid var(--turquoise-light);
+        }
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+        .calc-form label {
+            font-weight: 700;
+            display: block;
+            margin: 1rem 0 0.4rem;
+            color: var(--gray-700);
+        }
+        .calc-form input,
+        .calc-form select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .calc-form input:focus,
+        .calc-form select:focus {
+            border-color: var(--turquoise);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26,188,156,0.15);
+        }
+        .calc-results {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+        .result-card {
+            padding: 1rem;
+            border-radius: var(--radius);
+            margin: 0.8rem 0;
+            font-weight: 700;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .result-lose {
+            background: #FFF5F5;
+            color: var(--red-brown);
+            border: 2px solid var(--red-brown-light);
+        }
+        .result-maintain {
+            background: #F0FDF9;
+            color: var(--turquoise-dark);
+            border: 2px solid var(--turquoise);
+        }
+        .result-gain {
+            background: #FFF8F0;
+            color: #C27803;
+            border: 2px solid #F59E0B;
+        }
+        .result-card .cal-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+        }
+        .calc-btn {
+            background: var(--turquoise);
+            color: var(--white);
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .calc-btn:hover {
+            background: var(--turquoise-dark);
+            transform: scale(1.03);
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 2000;
+            display: none;
+            justify-content: flex-end;
+        }
+        .cart-overlay.open {
+            display: flex;
+        }
+        .cart-sidebar {
+            width: 100%;
+            max-width: 450px;
+            background: var(--white);
+            height: 100%;
+            padding: 1.5rem;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            animation: slideIn 0.3s ease;
+        }
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--turquoise-light);
+            padding-bottom: 1rem;
+        }
+        .cart-close {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray-500);
+            transition: var(--transition);
+        }
+        .cart-close:hover {
+            color: var(--red-brown);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-200);
+            gap: 8px;
+        }
+        .cart-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+        .cart-item-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .cart-item-cal {
+            font-size: 0.75rem;
+            color: var(--turquoise-dark);
+        }
+        .cart-item-price {
+            font-weight: 800;
+            color: var(--turquoise-dark);
+            white-space: nowrap;
+        }
+        .cart-item-remove {
+            color: var(--red-brown);
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+        .cart-item-remove:hover {
+            color: #c0392b;
+            transform: scale(1.2);
+        }
+        .cart-summary {
+            background: var(--turquoise-light);
+            border-radius: var(--radius-lg);
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+        }
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 4px 0;
+            font-weight: 600;
+        }
+        .cart-summary-row.total {
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--turquoise-dark);
+            border-top: 2px solid var(--turquoise);
+            margin-top: 8px;
+            padding-top: 10px;
+        }
+        .cart-summary-row.calories {
+            color: var(--red-brown);
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .checkout-form {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 1.2rem;
+            border: 2px solid var(--turquoise-light);
+            margin-top: 1rem;
+        }
+        .checkout-form h4 {
+            margin-bottom: 1rem;
+            color: var(--turquoise-dark);
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 12px;
+        }
+        .form-group label {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid var(--gray-200);
+            border-radius: var(--radius);
+            font-family: 'Cairo', sans-serif;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--turquoise);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26,188,156,0.15);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 70px;
+        }
+        .form-error {
+            color: var(--red-brown);
+            font-size: 0.8rem;
+            margin-top: 4px;
+            display: none;
+        }
+        .checkout-btn {
+            background: var(--turquoise);
+            color: var(--white);
+            border: none;
+            padding: 16px;
+            border-radius: 50px;
+            font-weight: 800;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            font-size: 1.1rem;
+            width: 100%;
+            margin-top: 0.5rem;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .checkout-btn:hover {
+            background: var(--turquoise-dark);
+            transform: scale(1.03);
+        }
+
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 2rem 5%;
+            text-align: center;
+            margin-top: 3rem;
+            border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+        }
+        .footer a {
+            color: var(--turquoise);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .footer-social {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 1.2rem 0;
+            flex-wrap: wrap;
+        }
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+        .footer-social-link.instagram {
+            background: linear-gradient(135deg, #833AB4, #E4405F);
+        }
+        .footer-social-link.facebook {
+            background: var(--facebook);
+        }
+        .footer-social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-img {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            .hero-text h1 { font-size: 2rem; }
+            .calc-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .nav-links { gap: 4px; }
+            .nav-link { padding: 8px 12px; font-size: 0.75rem; }
+            .category-tabs { gap: 6px; }
+            .cat-tab { padding: 10px 16px; font-size: 0.8rem; }
+            .cart-sidebar { max-width: 100%; }
+            .social-section { flex-direction: column; gap: 10px; }
+            .social-btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon">🥑</div>
+            <div class="logo-text">
+                Low Carb<br><small>Healthy Food | لوكارب</small>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">🏠 Home</a>
+            <a href="#menu-section" class="nav-link">📋 Menu</a>
+            <a href="#calculator" class="nav-link">🧮 Calorie Calc</a>
+            <a href="#subscriptions" class="nav-link">⭐ Subscriptions</a>
+            <a href="#contact" class="nav-link">📞 Contact</a>
+            <div class="cart-badge" onclick="toggleCart()">
+                <span class="cart-count" id="cartCount">0</span> 🛒 Cart
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">🔥 KETO | LOW CARB | HEALTHY</span>
+                <h1>لوكارب طعام صحي</h1>
+                <span class="en-title">Low Carb Healthy Food</span>
+                <p>وجبات كيتو منخفضة الكربوهيدرات، سلطات طازجة، ساندويشات صحية، وحلويات بدون سكر. توصيل لكل فروعنا في عمان وإربد</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="🔍 Search menu... (ابحث في القائمة)" id="searchInput" onkeyup="searchMenu()">
+                    <button onclick="searchMenu()">Search 🔍</button>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" alt="Healthy Keto Food" class="hero-img" id="heroImage">
+        </div>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="social-section" style="margin-top: 1.5rem;">
+            <a href="https://www.instagram.com/low_carb_healthy_food/" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i> Follow us on Instagram | تابعنا
+            </a>
+            <a href="https://www.facebook.com/low.carb.healthy.food.jo" target="_blank" class="social-btn facebook">
+                <i class="fab fa-facebook"></i> Follow us on Facebook | تابعنا
+            </a>
+            <a href="https://wa.me/962799766986" target="_blank" class="social-btn whatsapp-float-btn">
+                <i class="fab fa-whatsapp"></i> Order via WhatsApp | اطلب واتساب
+            </a>
+        </div>
+
+        <div class="contact-bar" id="contact">
+            <span class="branch-tag">📍 Branches</span>
+            <a href="tel:0799766986" class="contact-chip"><i class="fas fa-phone"></i> Call Center: 0799766986</a>
+            <span class="contact-chip"><i class="fas fa-map-marker-alt"></i> Khalda: 0799766987</span>
+            <span class="contact-chip"><i class="fas fa-map-marker-alt"></i> Jubaiha: 0792283666</span>
+            <span class="contact-chip"><i class="fas fa-map-marker-alt"></i> Irbid: 0799766988</span>
+            <span class="branch-tag">⏰ Sat-Thu: 9AM-10:45PM | Fri: Open</span>
+            <a href="https://www.instagram.com/low_carb_healthy_food/" target="_blank" class="contact-chip instagram">
+                <i class="fab fa-instagram"></i> @low_carb_healthy_food
+            </a>
+            <a href="https://www.facebook.com/low.carb.healthy.food.jo" target="_blank" class="contact-chip facebook">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+        </div>
+
+        <div class="subscription-card" id="subscriptions">
+            <h2>📦 26-Day Subscriptions (اشتراكات 26 يوم)</h2>
+            <div class="sub-grid">
+                <div class="sub-item">
+                    <div class="price">85 <small>JD</small></div>
+                    <div class="label">🥗 Lunch Meal<br><small>وجبة غداء</small></div>
+                </div>
+                <div class="sub-item">
+                    <div class="price">165 <small>JD</small></div>
+                    <div class="label">🍱 Lunch & Dinner<br><small>وجبتين عشاء وغداء</small></div>
+                </div>
+                <div class="sub-item">
+                    <div class="price">230 <small>JD</small></div>
+                    <div class="label">🍳 3 Meals<br><small>فطور، عشاء، وغداء</small></div>
+                </div>
+                <div class="sub-item">
+                    <div class="price">60/75 <small>JD</small></div>
+                    <div class="label">🥬 Salad Subscription<br><small>M: 60 | L: 75</small></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator-section" id="calculator">
+            <h2 class="section-title" style="margin-top:0;">🧮 Calorie Calculator | حاسبة السعرات الحرارية</h2>
+            <p style="color:var(--gray-500); margin-bottom:1.5rem;">Find out how many calories you need to lose, maintain, or gain weight | اعرف كم سعرة تحتاج لخسارة، تثبيت، أو زيادة الوزن</p>
+            <div class="calc-grid">
+                <div class="calc-form">
+                    <label>Gender / الجنس</label>
+                    <select id="calcGender">
+                        <option value="male">Male / ذكر</option>
+                        <option value="female">Female / أنثى</option>
+                    </select>
+                    <label>Age / العمر (years)</label>
+                    <input type="number" id="calcAge" placeholder="e.g. 30" min="10" max="100" value="30">
+                    <label>Height / الطول (cm)</label>
+                    <input type="number" id="calcHeight" placeholder="e.g. 170" min="100" max="250" value="170">
+                    <label>Weight / الوزن (kg)</label>
+                    <input type="number" id="calcWeight" placeholder="e.g. 75" min="30" max="300" value="75">
+                    <label>Activity Level / مستوى النشاط</label>
+                    <select id="calcActivity">
+                        <option value="1.2">Sedentary / خامل (little/no exercise)</option>
+                        <option value="1.375">Lightly Active / نشاط خفيف (1-3 days/week)</option>
+                        <option value="1.55" selected>Moderately Active / نشاط متوسط (3-5 days/week)</option>
+                        <option value="1.725">Very Active / نشاط عالي (6-7 days/week)</option>
+                        <option value="1.9">Extra Active / نشاط مكثف (athlete/physical job)</option>
+                    </select>
+                    <button class="calc-btn" onclick="calculateCalories()">Calculate / احسب</button>
+                </div>
+                <div class="calc-results" id="calcResults">
+                    <p style="text-align:center;color:var(--gray-500);">Enter your details and click Calculate<br>أدخل بياناتك واضغط احسب</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-section">
+            <h2 class="section-title">📋 Our Menu | قائمتنا</h2>
+            <div class="category-tabs" id="categoryTabs">
+                <button class="cat-tab active" onclick="showCategory('all')">All / الكل</button>
+                <button class="cat-tab" onclick="showCategory('salads')">🥗 Salads</button>
+                <button class="cat-tab" onclick="showCategory('sandwiches')">🥪 Sandwiches</button>
+                <button class="cat-tab" onclick="showCategory('chicken')">🍗 Chicken</button>
+                <button class="cat-tab" onclick="showCategory('meat')">🥩 Meat</button>
+                <button class="cat-tab" onclick="showCategory('burgers')">🍔 Burgers</button>
+                <button class="cat-tab" onclick="showCategory('fish')">🐟 Fish</button>
+                <button class="cat-tab" onclick="showCategory('desserts')">🍰 Desserts</button>
+                <button class="cat-tab" onclick="showCategory('juices')">🧃 Juices</button>
+            </div>
+
+            <div id="menuContainer">
+                <div class="menu-section active" data-category="salads">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🥗 Standard & Special Salads | السلطات</h3>
+                    <div class="table-wrapper">
+                        <table class="menu-table">
+                            <thead>
+                                <tr><th>Item</th><th>Ingredients</th><th>Size</th><th>Price</th><th></th></tr>
+                            </thead>
+                            <tbody id="saladsTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="menu-section" data-category="sandwiches">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🥪 Sandwiches | الساندويش</h3>
+                    <div class="menu-grid" id="sandwichesGrid"></div>
+                </div>
+                <div class="menu-section" data-category="chicken">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🍗 Chicken Meals | وجبات الدجاج</h3>
+                    <div class="menu-grid" id="chickenGrid"></div>
+                </div>
+                <div class="menu-section" data-category="meat">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🥩 Meat Meals | وجبات اللحوم</h3>
+                    <div class="menu-grid" id="meatGrid"></div>
+                </div>
+                <div class="menu-section" data-category="burgers">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🍔 Burgers | وجبات البرجر</h3>
+                    <div class="menu-grid" id="burgersGrid"></div>
+                </div>
+                <div class="menu-section" data-category="fish">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🐟 Fish Meals | وجبات الأسماك</h3>
+                    <div class="menu-grid" id="fishGrid"></div>
+                </div>
+                <div class="menu-section" data-category="desserts">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🍰 Desserts | الحلويات</h3>
+                    <div class="menu-grid" id="dessertsGrid"></div>
+                </div>
+                <div class="menu-section" data-category="juices">
+                    <h3 style="margin:1rem 0;color:var(--turquoise-dark);">🧃 Juices | العصائر</h3>
+                    <div class="menu-grid" id="juicesGrid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2>🛒 Your Cart | سلة التسوق</h2>
+                <span class="cart-close" onclick="toggleCart()">✕</span>
+            </div>
+            <div id="cartItems">
+                <p style="color:var(--gray-500);text-align:center;padding:2rem;">Cart is empty<br>السلة فارغة</p>
+            </div>
+            <div class="cart-summary" id="cartSummary" style="display:none;">
+                <div class="cart-summary-row">
+                    <span>📦 Items | الأصناف:</span>
+                    <span id="summaryItems">0</span>
+                </div>
+                <div class="cart-summary-row calories">
+                    <span>🔥 Total Calories | السعرات:</span>
+                    <span id="summaryCalories">0 cal</span>
+                </div>
+                <div class="cart-summary-row total">
+                    <span>💰 Total | الإجمالي:</span>
+                    <span id="summaryTotal">0.00 JD</span>
+                </div>
+            </div>
+            <div class="checkout-form" id="checkoutForm" style="display:none;">
+                <h4>📝 Complete Your Order | أكمل طلبك</h4>
+                <div class="form-group">
+                    <label>👤 Full Name / الاسم الكامل *</label>
+                    <input type="text" id="custName" placeholder="Your full name..." required>
+                    <span class="form-error" id="nameError">Please enter your name / الرجاء إدخال الاسم</span>
+                </div>
+                <div class="form-group">
+                    <label>📞 Phone Number / رقم الهاتف *</label>
+                    <input type="tel" id="custPhone" placeholder="07XXXXXXXXX" required>
+                    <span class="form-error" id="phoneError">Please enter a valid phone number / الرجاء إدخال رقم هاتف صحيح</span>
+                </div>
+                <div class="form-group">
+                    <label>📍 Delivery Location / موقع التوصيل *</label>
+                    <textarea id="custLocation" placeholder="Full address with building/landmarks... العنوان الكامل مع البناية/معالم"></textarea>
+                    <span class="form-error" id="locationError">Please enter your location / الرجاء إدخال الموقع</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" onclick="submitOrder()">
+                    <i class="fab fa-whatsapp"></i> Send Order via WhatsApp | أرسل الطلب
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2025 <strong>Low Carb Healthy Food</strong> | All Rights Reserved</p>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/low_carb_healthy_food/" target="_blank" class="footer-social-link instagram">
+                <i class="fab fa-instagram fa-lg"></i> Instagram
+            </a>
+            <a href="https://www.facebook.com/low.carb.healthy.food.jo" target="_blank" class="footer-social-link facebook">
+                <i class="fab fa-facebook fa-lg"></i> Facebook
+            </a>
+        </div>
+        <p>📞 Call Center: <a href="tel:0799766986">0799766986</a> | Follow us: 
+            <a href="https://www.instagram.com/low_carb_healthy_food/" target="_blank">@low_carb_healthy_food</a>
+        </p>
+        <p style="margin-top:0.5rem;font-size:0.8rem;">Keto Diet Info: 75% Fats, 25% Protein, &lt;5% Carbs | نظام الكيتو: 75% دهون، 25% بروتين، أقل من 5% نشويات</p>
+    </div>
+
+    <script>
+        // ============ MENU DATA WITH REAL PHOTOS ============
+        const saladData = [
+            { name: 'سلطة يونانية (Greek)', ing: 'خس - خيار - طماطم كرزية - زيتون - جبنة فيتا - فليفلة ملونة', priceM: 3.00, priceL: 4.00, cal: 320, img: 'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400' },
+            { name: 'سلطة بالي (Bali)', ing: 'خس - بصل احمر - زيتون - فطر - طماطم مجففة', priceM: 3.00, priceL: 4.00, cal: 280, img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400' },
+            { name: 'سلطة كينوا (Quinoa)', ing: 'خس - كينوا - خيار - بندورة - زيتون - فليفلة ملونة', priceM: 3.00, priceL: 4.00, cal: 350, img: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400' },
+            { name: 'سلطة سيزر (Caesar)', ing: 'خس - فطر - جبنة بارميزان - خبز محمص - صدر دجاج', priceM: 3.00, priceL: 4.00, cal: 380, img: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400' },
+            { name: 'سلطة الباسيتو (Paseto)', ing: 'خس - معكرونة - فليفلة ملونة - ذرة - فاصوليا حمراء - جبنة تشدر - طماطم كرزية', priceM: 3.00, priceL: 4.00, cal: 420, img: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400' },
+            { name: 'سلطة جكاوا (Jakawa)', ing: 'جرجير - تفاح - كيوي - كرانبيري - لوز - جبنة فيتا - بذور كتان', priceM: 3.00, priceL: 4.00, cal: 310, img: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400' },
+            { name: 'سلطة الأرغولا (Arugula)', ing: 'جرجير - فراولة - برتقال - غريب فروت - كينوا - جبنة بارميزان', priceM: 3.00, priceL: 4.00, cal: 290, img: 'https://images.unsplash.com/photo-1607532941433-304659e8198a?w=400' },
+            { name: 'سلطة الكاني (Kani)', ing: 'خس - خيار - بانكو - ذرة - جزر - كراب', priceM: 4.00, priceL: 4.00, cal: 340, img: 'https://images.unsplash.com/photo-1551248429-40975aa4de74?w=400' },
+            { name: 'سلطة تاكو (Taco)', ing: 'خس - لحمة مفرومة - زيتون اسود - بصل أحمر - ذرة - فاصوليا حمراء - طماطم كرزية - شيبس', priceM: 4.00, priceL: 4.50, cal: 450, img: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400' },
+            { name: 'سلطة بروتينز (Proteins)', ing: 'خس - خيار - طماطم كرزية - فليفلة ملونة - ذرة - جزر - زيتون - تونا - بيض', priceM: 4.00, priceL: 4.50, cal: 480, img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400' },
+            { name: 'سلطة عربية (Arabic)', ing: 'خس - خيار - بندورة - جزر - ملفوف', priceM: 2.50, priceL: 3.00, cal: 200, img: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400' },
+            { name: 'سلطة فتوش (Fattoush)', ing: 'خس - خيار - بندورة - فجل - بصل اخضر - نعناع - بقلة - خبز محمص', priceM: 3.00, priceL: 3.50, cal: 260, img: 'https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=400' },
+            { name: 'سلطة مارلي (Marley)', ing: 'سبانخ - خس - مانجا - خيار - فراولة - جوز - بذور الكتان', priceM: 3.00, priceL: 4.00, cal: 300, img: 'https://images.unsplash.com/photo-1600335895229-6bf68b1cd84a?w=400' },
+            { name: 'سلطة سبارلو (Sparlo)', ing: 'سبانخ - فراولة - بصل احمر - فطر - جبنة حلوم مشوية', priceM: 3.00, priceL: 4.00, cal: 330, img: 'https://images.unsplash.com/photo-1572449043416-55f6b8d5c2b1?w=400' },
+            { name: 'سلطة توتي فروتي (Tutti Frutti)', ing: 'جرجير - شمندر - فراولة - رمان - لوز - بذور شيا', priceM: 3.00, priceL: 4.00, cal: 280, img: 'https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=400' },
+            { name: 'سلطة تونا (Tuna)', ing: 'خس - جزر - فاصوليا حمراء - ذرة - طماطم كرزية - خيار - تونا', priceM: 3.00, priceL: 4.00, cal: 350, img: 'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?w=400' },
+            { name: 'سلطة سلمى (Salma)', ing: 'سبانخ - كينوا - فراولة - فطر - افوكادو - كاجو - كرانبيري - بذور الشيا', priceM: 3.50, priceL: 5.00, cal: 400, img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400' },
+            { name: 'سلطة سالمون مدخن', ing: 'جرجير - سالمون مدخن - جريب فروت - بذور الشيا - خيار', priceM: 3.50, priceL: 5.00, cal: 370, img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400' },
+            { name: 'سلطة بحرية (Seafood)', ing: 'خس - لب النخيل - ذرة - كاليماري - كراب - جمبري', priceM: 3.50, priceL: 5.00, cal: 320, img: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400' },
+            { name: 'دجاج مع افوكادو (Special)', ing: 'خس - دجاج - بذور الشيا - افوكادو', priceSpecial: 4.00, cal: 420, img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400' },
+            { name: 'سلطة برجر (Special)', ing: 'خس - طماطم كرزية - فطر - بصل أحمر - مخلل - لحمة مفرومة - جبنة شيدر', priceSpecial: 4.00, cal: 480, img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400' },
+            { name: 'سلطة تشاينيز (Special)', ing: 'خس - صدر دجاج - ملفوف احمر - خيار - فليفلة ملونة - بصل اخضر - فستق - سمسم', priceSpecial: 4.50, cal: 450, img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400' },
+            { name: 'سلطة بيكيتو (Special)', ing: 'خس - بروكلي - بصل أحمر - بيف بيكون - جبنة شيدر - جوز', priceSpecial: 4.50, cal: 500, img: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=400' },
+            { name: 'سلطة سترفوكادو (Special)', ing: 'سبانخ - افوكادو - فراولة - فطر - جبنة بارميزان - لوز - بذور الشيا', priceSpecial: 5.00, cal: 430, img: 'https://images.unsplash.com/photo-1600335895229-6bf68b1cd84a?w=400' },
+            { name: 'سلطتنا (Special)', ing: 'جرجير - خيار - افوكادو - سالمون مدخن - بصل أحمر - كيبيرز - بذور كتان', priceSpecial: 6.00, cal: 460, img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400' },
+            { name: 'سلطة بحرية سبيشال', ing: 'خس - جمبري - كاليماري - كراب - فليفلة ملونة - طماطم كرزية - افوكادو - بصل أحمر - جبنة بارميزان', priceSpecial: 6.00, cal: 520, img: 'https://images.unsplash.com/photo-1559737558-2f5a35f4523b?w=400' },
+        ];
+
+        const menuItems = {
+            sandwiches: [
+                { name: 'حلوم مشوي', cal: 260, price: 2.50, img: 'https://images.unsplash.com/photo-1550507992-eb63ffee0847?w=400' },
+                { name: 'حلوم وتيركي', cal: 260, price: 2.50, img: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400' },
+                { name: 'فاهيتا', cal: 340, price: 3.00, img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400' },
+                { name: 'مكسيكي (حار)', cal: 340, price: 3.00, img: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400' },
+                { name: 'فاهيتا لحم', cal: 360, price: 3.25, img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400' },
+                { name: 'كباب تركي', cal: 360, price: 3.50, img: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400' },
+                { name: 'شاورما لحم', cal: 420, price: 4.00, img: 'https://images.unsplash.com/photo-1561651823-34feb0220926?w=400' },
+                { name: 'شاورما ايطالي', cal: 440, price: 4.00, img: 'https://images.unsplash.com/photo-1550304943-4f24f54ddde9?w=400' },
+            ],
+            chicken: [
+                { name: 'دجاج بافلو حار', cal: 463, price: 4.00, img: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=400' },
+                { name: 'دجاج مكسيكي', cal: 480, price: 4.00, img: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400' },
+                { name: 'دجاج وايت', cal: 488, price: 4.00, img: 'https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=400' },
+                { name: 'دجاج مع مكسرات', cal: 590, price: 4.00, img: 'https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=400' },
+            ],
+            meat: [
+                { name: 'كباب عثماني', cal: 576, price: 5.00, img: 'https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=400' },
+                { name: 'كباب بالطحينيه', cal: 398, price: 5.00, img: 'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400' },
+                { name: 'تاكو لحمه', cal: 576, price: 5.00, img: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=400' },
+                { name: 'ستيك ماشروم', cal: 578, price: 5.00, img: 'https://images.unsplash.com/photo-1432139555190-2f4e536680a4?w=400' },
+                { name: 'ستيك مكسيكي حار', cal: 463, price: 5.00, img: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400' },
+                { name: 'استراغنوف لحمه', cal: 576, price: 5.00, img: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=400' },
+                { name: 'ستيك وايت', cal: 480, price: 5.00, img: 'https://images.unsplash.com/photo-1558030006-450675393462?w=400' },
+                { name: 'ستيك مع جبنه', cal: 580, price: 5.00, img: 'https://images.unsplash.com/photo-1432139555190-2f4e536680a4?w=400' },
+            ],
+            burgers: [
+                { name: 'كلاسيك برجر دجاج', cal: 435, price: 4.00, ing: 'برجر 150غ - خس - بندورة - بصل - جبنة - تيركي - خضار سوتيه', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400' },
+                { name: 'ماشروم برجر (لحمه)', cal: 512, price: 4.50, ing: 'برجر 150غ لحمه - مخلل - جبنة - بصل - تيركي - خضار سوتيه', img: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400' },
+                { name: 'برجر 150غ لحمه', cal: 588, price: 5.00, ing: '2 قطعة بيف بيكون - جبنة - خس - فطر - خضار سوتيه', img: 'https://images.unsplash.com/photo-1586816001966-79b736744398?w=400' },
+                { name: 'برجريتو برجر (لحمه)', cal: 608, price: 5.50, ing: 'برجر 150غ لحمه - خس - تيركي - جبنة - بندورة - خضار سوتيه', img: 'https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=400' },
+            ],
+            fish: [
+                { name: 'سمك مطفي', cal: 480, price: 5.00, ing: 'سمك فيليه - ليمون - ثوم - خضار سوتيه', img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400' },
+                { name: 'سمك سنجاري', cal: 386, price: 5.00, ing: 'سمك فيليه - صلصة حمراء - خضار سوتيه', img: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=400' },
+                { name: 'سمك مكسرات', cal: 470, price: 5.00, ing: 'سمك فيليه - مكسرات - صوص الطحينية - خضار سوتيه', img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400' },
+                { name: 'سمك بروفنسال', cal: 379, price: 6.00, ing: 'سمك فيليه - ثوم - افوكادو - خضار سوتيه', img: 'https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=400' },
+                { name: 'سالمون مطفي', cal: 580, price: 6.00, ing: 'وايت ليمون - صوص كريمي - ثوم - خضار سوتيه', img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400' },
+                { name: 'سبانش سالمون', cal: 383, price: 7.50, ing: 'سالمون - سبانخ - فطر - صوص كريمي - خضار سوتيه', img: 'https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=400' },
+                { name: 'طارخون سالمون', cal: 562, price: 8.00, ing: 'سالمون - طارخون - فليفلة ملونة - صوص كريمي - خضار سوتيه', img: 'https://images.unsplash.com/photo-1485921325833-c519f76c4927?w=400' },
+                { name: 'سمك بالطحينيه', cal: 540, price: 5.00, ing: 'سمك فيليه - صوص طحينية - خضار سوتيه', img: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400' },
+            ],
+            desserts: [
+                { name: 'شوكلت تشيز كيك', cal: 230, price: 3.00, img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400' },
+                { name: 'بينت بتر تشيز كيك', cal: 275, price: 3.50, img: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400' },
+                { name: 'بروتين بولز', cal: 240, price: 2.50, img: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400' },
+                { name: 'براوني', cal: 245, price: 3.00, img: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400' },
+                { name: 'ماربل كيك', cal: 256, price: 3.00, img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400' },
+                { name: 'كيتو كيك', cal: 270, price: 3.00, img: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400' },
+                { name: 'ريد فيلفيت', cal: 295, price: 3.00, img: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=400' },
+                { name: 'بستاشيو تشيز كيك', cal: 285, price: 4.00, img: 'https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400' },
+            ],
+            juices: [
+                { name: 'ليمون ونعنع', cal: 80, price: 2.00, img: 'https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400' },
+                { name: 'سترو كونات', cal: 120, price: 2.00, img: 'https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400' },
+                { name: 'أفوكادو', cal: 180, price: 3.00, img: 'https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=400' },
+            ],
+        };
+
+        // ============ CART ============
+        let cart = [];
+
+        function addToCart(name, price, cal = 0) {
+            const btn = event.target;
+            cart.push({ name, price, cal });
+            updateCart();
+            btn.classList.add('added');
+            setTimeout(() => btn.classList.remove('added'), 600);
+            const cartBadge = document.querySelector('.cart-badge');
+            cartBadge.style.transform = 'scale(1.1)';
+            setTimeout(() => cartBadge.style.transform = 'scale(1)', 300);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            document.getElementById('cartCount').textContent = cart.length;
+            const cartItems = document.getElementById('cartItems');
+            const cartSummary = document.getElementById('cartSummary');
+            const checkoutForm = document.getElementById('checkoutForm');
+
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="color:var(--gray-500);text-align:center;padding:2rem;">Cart is empty<br>السلة فارغة</p>';
+                cartSummary.style.display = 'none';
+                checkoutForm.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map((item, i) => `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-cal">🔥 ${item.cal} cal</div>
+                        </div>
+                        <span class="cart-item-price">${item.price.toFixed(2)} JD</span>
+                        <span class="cart-item-remove" onclick="removeFromCart(${i})">🗑️</span>
+                    </div>
+                `).join('');
+
+                const totalItems = cart.length;
+                const totalCalories = cart.reduce((sum, item) => sum + (item.cal || 0), 0);
+                const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+
+                document.getElementById('summaryItems').textContent = totalItems;
+                document.getElementById('summaryCalories').textContent = totalCalories.toLocaleString() + ' cal';
+                document.getElementById('summaryTotal').textContent = totalPrice.toFixed(2) + ' JD';
+
+                cartSummary.style.display = 'block';
+                checkoutForm.style.display = 'block';
+            }
+        }
+
+        function toggleCart() {
+            document.getElementById('cartOverlay').classList.toggle('open');
+            document.querySelectorAll('.form-error').forEach(e => e.style.display = 'none');
+        }
+
+        function closeCartOutside(event) {
+            if (event.target === document.getElementById('cartOverlay')) {
+                toggleCart();
+            }
+        }
+
+        function submitOrder() {
+            const name = document.getElementById('custName').value.trim();
+            const phone = document.getElementById('custPhone').value.trim();
+            const location = document.getElementById('custLocation').value.trim();
+
+            document.querySelectorAll('.form-error').forEach(e => e.style.display = 'none');
+            let hasError = false;
+
+            if (!name) { document.getElementById('nameError').style.display = 'block'; hasError = true; }
+            if (!phone || phone.length < 7) { document.getElementById('phoneError').style.display = 'block'; hasError = true; }
+            if (!location) { document.getElementById('locationError').style.display = 'block'; hasError = true; }
+
+            if (hasError) return;
+            if (cart.length === 0) { alert('Your cart is empty! | السلة فارغة!'); return; }
+
+            const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+            const totalCalories = cart.reduce((sum, item) => sum + (item.cal || 0), 0);
+            const itemsList = cart.map((item, i) => 
+                `${i+1}. ${item.name} - ${item.price.toFixed(2)} JD (🔥 ${item.cal} cal)`
+            ).join('\n');
+
+            const message = `🍽️ *New Order - Low Carb Healthy Food*\n\n` +
+                `👤 *Name:* ${name}\n` +
+                `📞 *Phone:* ${phone}\n` +
+                `📍 *Location:* ${location}\n\n` +
+                `📋 *Order Details:*\n${itemsList}\n\n` +
+                `📦 *Total Items:* ${cart.length}\n` +
+                `🔥 *Total Calories:* ${totalCalories.toLocaleString()} cal\n` +
+                `💰 *Total Price:* ${totalPrice.toFixed(2)} JD\n\n` +
+                `✅ Please confirm the order. Thank you! | الرجاء تأكيد الطلب. شكراً!`;
+
+            window.open(`https://wa.me/962799766986?text=${encodeURIComponent(message)}`, '_blank');
+
+            cart = [];
+            updateCart();
+            document.getElementById('custName').value = '';
+            document.getElementById('custPhone').value = '';
+            document.getElementById('custLocation').value = '';
+            toggleCart();
+        }
+
+        // ============ RENDER MENU ============
+        function renderAllMenu() {
+            const saladsBody = document.getElementById('saladsTableBody');
+            saladsBody.innerHTML = saladData.map(s => {
+                const cal = s.cal || 300;
+                if (s.priceSpecial) {
+                    return `<tr>
+                        <td><strong>${s.name}</strong> <small style="color:var(--turquoise-dark);">🔥${cal} cal</small></td>
+                        <td>${s.ing}</td><td>Special</td>
+                        <td><strong>${s.priceSpecial.toFixed(2)} JD</strong></td>
+                        <td><button class="add-btn" onclick="addToCart('${s.name}', ${s.priceSpecial}, ${cal})">+ Add</button></td>
+                    </tr>`;
+                }
+                return `<tr>
+                    <td><strong>${s.name}</strong> <small style="color:var(--turquoise-dark);">🔥${cal} cal</small></td>
+                    <td>${s.ing}</td><td>M: ${s.priceM.toFixed(2)} | L: ${s.priceL.toFixed(2)}</td>
+                    <td><strong>${s.priceM.toFixed(2)} / ${s.priceL.toFixed(2)} JD</strong></td>
+                    <td>
+                        <button class="add-btn" onclick="addToCart('${s.name} (M)', ${s.priceM}, ${cal})">+ M</button>
+                        <button class="add-btn" style="margin-top:4px;" onclick="addToCart('${s.name} (L)', ${s.priceL}, ${Math.round(cal*1.3)})">+ L</button>
+                    </td>
+                </tr>`;
+            }).join('');
+
+            for (const [category, items] of Object.entries(menuItems)) {
+                const grid = document.getElementById(`${category}Grid`);
+                if (!grid) continue;
+                grid.innerHTML = items.map(item => {
+                    const cal = item.cal || 0;
+                    const calBadge = cal ? `<span class="calorie-badge">🔥 ${cal} cal</span>` : '';
+                    const ingText = item.ing ? `<p class="menu-card-ingredients">${item.ing}</p>` : '';
+                    const bgStyle = item.img ? 
+                        `background-image:url('${item.img}'); background-size:cover; background-position:center;` :
+                        `background:linear-gradient(135deg, var(--turquoise-light), #e8f8f5);`;
+                    return `
+                    <div class="menu-card">
+                        <div class="menu-card-img" style="${bgStyle}">
+                            ${calBadge}
+                        </div>
+                        <div class="menu-card-body">
+                            <h3 class="menu-card-title">${item.name}</h3>
+                            ${ingText}
+                            <div class="menu-card-footer">
+                                <span class="menu-card-price">${item.price.toFixed(2)} JD</span>
+                                <button class="add-btn" onclick="addToCart('${item.name}', ${item.price}, ${cal})">+ Add</button>
+                            </div>
+                        </div>
+                    </div>`;
+                }).join('');
+            }
+        }
+
+        function showCategory(cat) {
+            document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            const sections = document.querySelectorAll('.menu-section');
+            sections.forEach(s => {
+                if (cat === 'all' || s.dataset.category === cat) {
+                    s.classList.add('active');
+                } else {
+                    s.classList.remove('active');
+                }
+            });
+            document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function searchMenu() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (!query) {
+                showCategory('all');
+                document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+                document.querySelector('.cat-tab').classList.add('active');
+                return;
+            }
+            document.querySelectorAll('.menu-section').forEach(s => s.classList.add('active'));
+            document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.menu-card, .menu-table tr').forEach(el => {
+                const text = el.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    el.style.display = '';
+                    el.style.background = 'var(--turquoise-light)';
+                    setTimeout(() => el.style.background = '', 2000);
+                }
+            });
+            document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function calculateCalories() {
+            const gender = document.getElementById('calcGender').value;
+            const age = parseInt(document.getElementById('calcAge').value);
+            const height = parseInt(document.getElementById('calcHeight').value);
+            const weight = parseInt(document.getElementById('calcWeight').value);
+            const activity = parseFloat(document.getElementById('calcActivity').value);
+
+            if (!age || !height || !weight) {
+                alert('Please fill all fields / الرجاء ملء جميع الحقول');
+                return;
+            }
+
+            let bmr;
+            if (gender === 'male') {
+                bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+            } else {
+                bmr = 10 * weight + 6.25 * height - 5 * age - 161;
+            }
+
+            const tdee = Math.round(bmr * activity);
+            const loseWeight = Math.round(tdee - 500);
+            const gainWeight = Math.round(tdee + 500);
+
+            document.getElementById('calcResults').innerHTML = `
+                <h4 style="text-align:center;margin-bottom:1rem;">Your Results | نتائجك</h4>
+                <p style="text-align:center;color:var(--gray-500);">BMR: <strong>${Math.round(bmr).toLocaleString()}</strong> cal | TDEE: <strong>${tdee.toLocaleString()}</strong> cal</p>
+                <div class="result-card result-lose">
+                    <span>📉 Lose Weight / خسارة الوزن</span>
+                    <div class="cal-number">${loseWeight.toLocaleString()}</div>
+                    <span>calories/day | سعرة/يوم</span>
+                </div>
+                <div class="result-card result-maintain">
+                    <span>⚖️ Maintain Weight / تثبيت الوزن</span>
+                    <div class="cal-number">${tdee.toLocaleString()}</div>
+                    <span>calories/day | سعرة/يوم</span>
+                </div>
+                <div class="result-card result-gain">
+                    <span>📈 Gain Weight / زيادة الوزن</span>
+                    <div class="cal-number">${gainWeight.toLocaleString()}</div>
+                    <span>calories/day | سعرة/يوم</span>
+                </div>
+                <p style="font-size:0.8rem;color:var(--gray-500);text-align:center;margin-top:1rem;">*Estimates based on Mifflin-St Jeor equation. Adjust ±500 cal for weight goals.</p>
+            `;
+            document.getElementById('calculator').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        renderAllMenu();
+        updateCart();
+    </script>
+</body>
+</html>
